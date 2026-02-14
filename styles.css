@@ -1,0 +1,162 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CONTAINER */
+.container {
+  background: #111827;
+  width: 400px;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Título */
+h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+/* Palabra random */
+#randomWord {
+  font-size: 32px;
+  margin: 20px 0;
+  color: #00e0ff;
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  height: 45px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Efecto focus */
+input:focus {
+  box-shadow: 0 0 10px #00e0ff;
+}
+
+/* Tiempo */
+.time-container {
+  margin-bottom: 10px;
+}
+
+/* Score */
+.score-container {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Pantalla final */
+.end-game-container {
+  margin-top: 20px;
+}
+
+/* Botón reiniciar */
+button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #00e0ff;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #00b8d4;
+  transform: scale(1.05);
+}
+
+/* Animación Shake */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+
+/* Clase que activa el shake */
+.shake {
+  animation: shake 0.3s ease;
+  animation-fill-mode: both;
+}
+
+/* Animación POP */
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Clase que activa el efecto */
+.pop {
+  animation: pop 0.3s ease;
+  color: #00ff99;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #1f1f1f, #2c3e50);
+  color: white;
+}
+
+body.light {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #111;
+}
+body.dark .container {
+  background: #111827;
+}
+
+body.light .container {
+  background: white;
+  color: #111;
+}
+.theme-btn {
+  margin-bottom: 15px;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: 2px solid #00e0ff;
+  color: #00e0ff;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-btn:hover {
+  background: #00e0ff;
+  color: black;
+}
+
+
